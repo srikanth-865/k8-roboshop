@@ -29,7 +29,7 @@ spec:
       project: roboshop
       tier: backend
       component: user
-   spec:
+  spec:
     containers:
      - name: user
        image: srikanth865/user:4.0.0
@@ -38,7 +38,7 @@ spec:
            name: user
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
  name: user
  namespace: roboshop
