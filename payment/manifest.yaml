@@ -88,7 +88,7 @@ metadata:
  name: payment
  namespace: roboshop
 spec:
- Selector:
+ selector:
   #this selector  service labels going to match the payment pod labels
      project: roboshop
      tier: backend
