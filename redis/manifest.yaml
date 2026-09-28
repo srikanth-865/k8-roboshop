@@ -69,8 +69,6 @@ spec:
 
 
 
-
-
  apiVersion: v1
 kind: pod
 metadata:
