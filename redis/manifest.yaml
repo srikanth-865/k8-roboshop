@@ -33,7 +33,6 @@ kind: Service
 metadata: 
  name: redis
  namespace: roboshop
-  # servicer labels  resource just for reference
  labels:
      project: roboshop
      tier: db
