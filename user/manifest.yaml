@@ -23,13 +23,13 @@ spec:
      tier: backend
      component: user
 
-  template:
+ template:
    metadata: 
     labels:
       project: roboshop
       tier: backend
       component: user
-  spec:
+   spec:
     containers:
      - name: user
        image: srikanth865/user:v1
