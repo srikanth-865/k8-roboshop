@@ -37,7 +37,7 @@ spec:
      project: roboshop
      tier: db
      component: rabbitmq
- spec:
+  spec:
    containers:
      - name: rabbitmq
        image: rabbitmq:3
