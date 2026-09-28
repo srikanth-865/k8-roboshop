@@ -112,7 +112,7 @@ spec:
         name: nginx
         items:
         - key: nginx.conf
-          value: nginx.conf
+          path: nginx.conf
         
 ---
 apiVersion: v1
