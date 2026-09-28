@@ -1,0 +1,82 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: redis
+ namespace: roboshop
+ # labels related to deployment resource just for reference
+ labels:
+    project: roboshop
+    tier: db
+    component: redis
+spec:
+ replicas: 1
+ selector:
+ #this labels is to match the pod containers
+   matchLabels:
+     project: roboshop
+     tier: db
+     component: redis
+##its a pod defination
+ template:
+  metadata:
+   labels:
+     project: roboshop
+     tier: db
+     component: redis
+  spec:
+    containers:
+     - name: redis
+       image: redis:7
+---
+apiVersion: v1
+kind: Service
+metadata: 
+ name: redis
+ namespace: roboshop
+  # servicer labels  resource just for reference
+ labels:
+     project: roboshop
+     tier: db
+     component: redis
+spec:
+ selector:
+     project: roboshop
+     tier: db
+     component: redis
+spec:
+ ports:
+  - protocol: TCP
+    port: 6379 #service port
+    targetPort: 6379 #container port
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ apiVersion: v1
+kind: pod
+metadata:
+ name: redis
+ namespace: roboshop
+spec:
+ containers:
+  - name: redis
+    image: redis: 7

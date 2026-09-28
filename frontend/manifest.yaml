@@ -96,13 +96,13 @@ spec:
    containers:
      - name: frontend
        image: srikanth865/frontend:v1
-       ##volume mount should be in container level we are using those volume
+       ##volume mount should be inside of container level we are using those volume
        volumeMounts:
         - name: nginx-config
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
           readOnly: true
-     #volumes should be in a pod level for just storing our nginx data here,it is like adding the disk to the pod
+     #volumes should be inside of a pod level for just storing our nginx data here,it is like adding the disk to the pod
    volumes:
      - name: nginx-config
        configMap:
