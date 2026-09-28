@@ -5,7 +5,7 @@ metadata:
   namespace: roboshop
   labels:
      project: roboshop
-     tier: db
+     tier: backend
      component: cart
 data:
  REDIS_HOST: "redis"
@@ -19,14 +19,14 @@ metadata:
  namespace: roboshop
  labels:
      project: roboshop
-     tier: db
+     tier: backend
      component: cart
 spec:
  replicas: 1
  selector:
   matchLabels:
      project: roboshop
-     tier: db
+     tier: backend
      component: cart
  ##pod defination to match labels from selector
  template:
@@ -35,7 +35,7 @@ spec:
    namespace: roboshop
    labels:
      project: roboshop
-     tier: db
+     tier: backend
      component: cart
   spec:
    containers:
@@ -52,7 +52,7 @@ metadata:
  namespace: roboshop
  labels:
      project: roboshop
-     tier: db
+     tier: backend
      component: cart
 spec:
  selector:
