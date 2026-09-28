@@ -25,6 +25,7 @@ metadata:
 spec:
  replicas: 1
  selector:
+
    matchLabels:
       project: roboshop
       tier: db
@@ -39,7 +40,7 @@ spec:
  spec:
    containers:
      - name: rabbitmq
-       image: rabbitmq: 3
+       image: rabbitmq:3
        envFrom:
         - secretRef:
             name: rabbitmq
