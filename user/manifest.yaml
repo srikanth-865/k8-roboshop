@@ -44,7 +44,7 @@ metadata:
  namespace: roboshop
 spec:
 
- Selector:
+ selector:
   #this selector  service labels going to match the user pod labels
      project: roboshop
      tier: backend
