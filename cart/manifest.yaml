@@ -57,7 +57,7 @@ metadata:
 spec:
  selector:
     project: roboshop
-    environment: dev
+    component: cart
     tier: backend
  ports:
   - protocol: TCP
