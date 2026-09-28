@@ -107,12 +107,12 @@ spec:
            name: nginx
      #volumes should be in a pod level for just storing our nginx data here,it is like adding the disk to the pod
    volumes:
-    - name: nginx-config
-      configMap:
-      name: nginx
-      items:
-      - key: nginx.conf
-        value: nginx.conf
+     - name: nginx-config
+       configMap:
+        name: nginx
+        items:
+        - key: nginx.conf
+          value: nginx.conf
         
 ---
 apiVersion: v1
