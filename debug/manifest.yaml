@@ -10,4 +10,4 @@ metadata:
 spec:
   containers:
    - name: debug
-     image: srikanth865/debug:4.0.0
+     image: srikanth865/debug:v1
