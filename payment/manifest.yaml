@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
  name: payment
  namespace: roboshop
- data:
+data:
     CART_HOST: "cart"
     CART_PORT: "8080"
     USER_HOST: "user"
@@ -32,7 +32,7 @@ metadata:
  namespace: roboshop
 spec:
  replicas: 1
- 
+
  selector:
   matchLabels:
      project: roboshop
@@ -41,7 +41,7 @@ spec:
   ##pod defination
   template:
    metadata: 
-   labels:
+    labels:
      project: roboshop
      tier: backend
      component: payment
