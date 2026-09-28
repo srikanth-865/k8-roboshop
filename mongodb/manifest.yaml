@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  # labels related to deployment resource its for jist reference
+  labels:
+    project: roboshop
+    tier: db
+    component: mongodb
+spec:
+  replicas: 1
+  selector:  #Tells the Deployment controller which Pods to manage (matching the labels).
+    matchLabels:
+      project: roboshop
+      tier: db
+      component: mongodb
+  # Pod defination
+  template:  #The blueprint used to create new Pods, defining the container name, image, and ports.
+    metadata:
+      labels:
+        project: roboshop
+        tier: db
+        component: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: srikanth865/mongodb:4.0.0
+---
+#service file which is used to for connecting pods and also The Service provides networking to those Pods:
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  # servicer labels
+  labels:
+      project: roboshop
+      tier: db
+      component: mongodb
+spec:
+  # Service uses the below labels to select the pods
+  selector:
+      project: roboshop
+      tier: db
+      component: mongodb
+  ports:
+    - protocol: TCP
+      port: 27017 # service port
+      targetPort: 27017 # container port
