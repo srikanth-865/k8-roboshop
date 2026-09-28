@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
  name: payment
  namespace: roboshop
-spec:
  data:
     CART_HOST: "cart"
     CART_PORT: "8080"
@@ -33,6 +32,7 @@ metadata:
  namespace: roboshop
 spec:
  replicas: 1
+ 
  selector:
   matchLabels:
      project: roboshop
