@@ -16,7 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
  name: cart
- namespace: cart
+ namespace: roboshop
  labels:
      project: roboshop
      tier: db
@@ -55,7 +55,7 @@ metadata:
      tier: db
      component: cart
 spec:
- Selector:
+ selector:
     project: roboshop
     environment: dev
     tier: backend
