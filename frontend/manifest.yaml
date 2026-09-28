@@ -94,7 +94,7 @@ spec:
        component: frontend
   spec:
    containers:
-     - name: nginx-config
+     - name: frontend
        image: srikanth865/frontend:v1
        ##volume mount should be in container level we are using those volume
        volumeMounts:
@@ -102,9 +102,6 @@ spec:
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
           readOnly: true
-       envFrom:
-        - configMapRef:
-           name: nginx
      #volumes should be in a pod level for just storing our nginx data here,it is like adding the disk to the pod
    volumes:
      - name: nginx-config
