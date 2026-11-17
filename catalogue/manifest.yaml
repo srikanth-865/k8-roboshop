@@ -61,5 +61,5 @@ spec:
 
  ports:  #ports expects a list, so we gik=ve like this - 
   - protocol: TCP
-    port: 8080 #serviceport
+    port: 8080 #serviceport it will listen mongodb service
     targetPort: 8080  #container port

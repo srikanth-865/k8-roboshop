@@ -46,5 +46,5 @@ spec:
       component: mongodb
   ports:
     - protocol: TCP
-      port: 27017 # service port
+      port: 27017 # service port #Listens for the incoming traffic coming from the Catalogue pod 
       targetPort: 27017 # container port
