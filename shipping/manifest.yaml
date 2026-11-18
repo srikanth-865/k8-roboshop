@@ -47,7 +47,7 @@ spec:
             path: /health  #health check
             port: liveness-port
             # we are giving 2 minutes to start the application,if not will say its failure for booting
-          failureThreshold: 12
+          failureThreshold: 30
           periodSeconds: 10
       readinessProbe: # this probe say Can I send traffic to it,if shipping not ready,removes that Pod from the Service's available endpoints.
           #k8s is continuously checking wheter pod/container is ready or not
