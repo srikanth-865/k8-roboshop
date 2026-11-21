@@ -9,7 +9,7 @@ metadata:
      component: shipping
 data:
   CART_ENDPOINT: cart:8080
-  # DB_HOST: mysql    we can use if we didnt perform RDS process uncomment it
+  # DB_HOST: mysql    we can use if we didnt follow RDS process uncomment it
   DB_HOST: roboshop-dev-mysql.c0n2oq0k4ekp.us-east-1.rds.amazonaws.com   #its by giving RDS databse process called endpoint
 ---
 apiVersion: apps/v1

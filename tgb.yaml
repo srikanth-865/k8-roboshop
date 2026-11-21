@@ -1,7 +1,7 @@
-apiVersion: elbv2.k8s.aws/v1beta1
+apiVersion: elbv2.k8s.aws/v1beta1  #this is CRD,before that we install helm repo for this 
 kind: TargetGroupBinding
 metadata:
-  name: frontend
+  name: frontend  #it selectes the frontend service endpoint ip and created targetgroup ip in loadbalancer
   namespace: roboshop
 spec:
   serviceRef:
